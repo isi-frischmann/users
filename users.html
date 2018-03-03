@@ -20,12 +20,14 @@
 
 $(document).ready(function(){
 
-	
+		
+
 		$( 'form' ).submit(function(){
-		   var first = $('.first').val();
-		   var last = $('.last').val();
-		   var email = $('.email').val();
-		   var phone = $('.phone').val();
+			//Be aware to set the var into the function otherwise it won't work because the var are not connected with the new added row
+			var first = $('.first').val(); //Just created a new variable that I don't need to write the whole input in the row below
+			var last = $('.last').val();
+			var email = $('.email').val();
+			var phone = $('.phone').val();
 			$('.new').children("tbody").append("<tr><td>" +first+ "</td><td>" +last+ "</td><td>" +email+ "</td><td>" +phone+ "</td></tr>");
 			return false;
 	}); 
@@ -45,9 +47,9 @@ $(document).ready(function(){
 				<td>Contact#</td>
 			</tr>
 			</thead>
-		<tbody>
+		<tbody>	  <!--This is the empty body where the added input from the user should be added.-->
 			<tr>
-				<td></td>
+				<td></td> <!--This is the empty row where the input from the user should be added.-->
 			</tr>
 		</tbody>
 		</table>

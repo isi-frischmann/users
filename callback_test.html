@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Callback Test</title>
+</head>
+<meta charset="utf-8">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<script>
+		//Always set the function above the $(document).ready thing!! That you have the function always on top and you have a good overview.
+
+
+		/*Be aware that when you creating a callback to implement it after you wrote the 
+		*/
+		
+function AlertFunction() {
+		alert("This is the alert window")
+	};
+
+$(document).ready(function() {
+
+	$("button").click(function(){
+		$("div").hide(1000, AlertFunction)
+		
+		/*$( "div" ).hide(5000, function){
+			alert("This is the alert window")
+		});
+	});*/
+
+});
+});
+
+</script>
+
+<body>
+
+<button>Click me</button>
+
+
+<div>Hello</div>
+
+</body>
+</html>
