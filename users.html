@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Users</title>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<style>
+	table {
+		border: solid;
+	}
+
+	td {
+		padding-left: 50px;
+	}
+</style>
+
+<script>
+
+$(document).ready(function(){
+
+	
+		$( 'form' ).submit(function(){
+		   var first = $('.first').val();
+		   var last = $('.last').val();
+		   var email = $('.email').val();
+		   var phone = $('.phone').val();
+			$('.new').children("tbody").append("<tr><td>" +first+ "</td><td>" +last+ "</td><td>" +email+ "</td><td>" +phone+ "</td></tr>");
+			return false;
+	}); 
+	});	
+
+</script>
+
+</head>
+<body>
+		
+		<table class="new">
+			<thead>
+			<tr>
+				<td>Frist Name</td>
+				<td>Last Name</td>
+				<td>Email Address</td>
+				<td>Contact#</td>
+			</tr>
+			</thead>
+		<tbody>
+			<tr>
+				<td></td>
+			</tr>
+		</tbody>
+		</table>
+	<form>
+
+		<h1>Add User</h1>
+
+		<hr>
+
+		First Name:<input class="first" type="text" name="first_name"><br>
+		Last Name:<input class="last" type="text" name="last_name"><br>
+		E-Mail Address:<input class="email" type="text" name="email_address"><br>
+		Contact No.:<input class="phone" type="text" name="contact_no."><br>
+		<br>
+		<input id="submit" type="Submit" name="submit" value="Add User">
+	</form>
+</body>
+</html>
